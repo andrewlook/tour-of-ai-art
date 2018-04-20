@@ -1,6 +1,6 @@
-!TemplateConfig
-ipynblog_template: !IpynbTemplate
-    nbconvert_template: ./nbconvert/distill_v2_svelte.tpl
-    nbconvert_input: ./notebooks/test.ipynb
-    nbconvert_output: ./public/index.html
-    images_dir: ./public/images/
+ipynblog_template:
+  colab_url: https://colab.research.google.com/drive/1vKkCidDN6PE1o9BYvRk2Lxx9T-WdFzcx#scrollTo=rH0i1mgF4dIT
+  images_dir: ./public/images/
+  nbconvert_input: /Users/alook/whirlwind_tour/notebooks/a_whirlwind_tour_of_ai_art.ipynb
+  nbconvert_output: ./public/index.html
+  nbconvert_template: ./nbconvert/distill_v2_svelte.tpl
