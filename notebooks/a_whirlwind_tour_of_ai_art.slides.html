@@ -11905,7 +11905,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="A-(Brief)-Tour-of-AI-Art">A (Brief) Tour of AI Art<a class="anchor-link" href="#A-(Brief)-Tour-of-AI-Art">&#182;</a></h1><h4 id="by-Andrew-Look">by Andrew Look<a class="anchor-link" href="#by-Andrew-Look">&#182;</a></h4><p><img src="https://github.com/andrewlook/tour-of-ai-art/raw/master/notebooks/images/title/IMG_7772_guided.gif" width=600 /></p>
+<h1 id="A-(Brief)-Tour-of-AI-Art">A (Brief) Tour of AI Art<a class="anchor-link" href="#A-(Brief)-Tour-of-AI-Art">&#182;</a></h1><h4 id="by-Andrew-Look">by Andrew Look<a class="anchor-link" href="#by-Andrew-Look">&#182;</a></h4><p><img src="https://github.com/andrewlook/tour-of-ai-art/raw/master/notebooks/images/title/IMG_7772_guided.gif" width=400 /></p>
 
 </div>
 </div>
@@ -11921,7 +11921,7 @@ a.anchor-link {
 </blockquote>
 <!-- https://blog.ycombinator.com/making-music-and-art-through-machine-learning-doug-eck-of-magenta/ -->
 
-<p><img src="https://courses.cs.washington.edu/courses/cse576/13sp/images/eigenfaces.png" width=600 /></p>
+<p><img src="https://courses.cs.washington.edu/courses/cse576/13sp/images/eigenfaces.png" width=400 /></p>
 <p><!-- ![eigenfaces](https://courses.cs.washington.edu/courses/cse576/13sp/images/eigenfaces.png) -->
 <a href="https://courses.cs.washington.edu/courses/cse576/13sp/projects/project3/">image credit</a></p>
 
@@ -12167,6 +12167,41 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Jump-down-here-and-run-all-setup-cells-at-once">Jump down here and run all setup cells at once<a class="anchor-link" href="#Jump-down-here-and-run-all-setup-cells-at-once">&#182;</a></h3><p>run the following, it will execute all cells before that one:
+<strong><code>&lt;Cmd&gt;-&lt;fn&gt;-F8</code></strong>
+(Note: you may not need to press <code>fn</code> key).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># First run &lt;Cmd&gt;-&lt;fn&gt;-F8, to run all cells before this one.</span>
+
+<span class="c1"># While you&#39;re waiting, you can hit &lt;Shift&gt;-Enter in this cell,</span>
+<span class="c1"># and it will generate some output to verify that everything got set</span>
+<span class="c1"># up correctly.</span>
+
+<span class="c1">### Test deepdream just to make sure everything works</span>
+<span class="n">layer</span> <span class="o">=</span> <span class="s1">&#39;mixed4d_3x3_bottleneck_pre_relu&#39;</span>
+<span class="n">channel</span> <span class="o">=</span> <span class="mi">139</span> <span class="c1"># picking some feature channel to visualize</span>
+<span class="n">render_naive</span><span class="p">(</span><span class="n">T</span><span class="p">(</span><span class="n">layer</span><span class="p">)[:,:,:,</span><span class="n">channel</span><span class="p">])</span>
+<span class="n">render_multiscale</span><span class="p">(</span><span class="n">T</span><span class="p">(</span><span class="n">layer</span><span class="p">)[:,:,:,</span><span class="n">channel</span><span class="p">])</span>
+<span class="n">render_lapnorm</span><span class="p">(</span><span class="n">T</span><span class="p">(</span><span class="n">layer</span><span class="p">)[:,:,:,</span><span class="n">channel</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Colab-Hints">Colab Hints<a class="anchor-link" href="#Colab-Hints">&#182;</a></h2><p>If you want to learn more about how to navigate Colab:</p>
 <ul>
 <li><a href="https://colab.research.google.com/notebooks/gpu.ipynb">Tensorflow with GPU</a></li>
@@ -12180,7 +12215,7 @@ a.anchor-link {
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12188,7 +12223,7 @@ a.anchor-link {
 <h1 id="What-is-AI-art?">What is AI art?<a class="anchor-link" href="#What-is-AI-art?">&#182;</a></h1>
 </div>
 </div>
-</div>
+</div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12197,7 +12232,7 @@ a.anchor-link {
 
 </div>
 </div>
-</div>
+</div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12206,7 +12241,7 @@ a.anchor-link {
 
 </div>
 </div>
-</div>
+</div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12215,16 +12250,21 @@ a.anchor-link {
 
 </div>
 </div>
-</div>
+</div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Framework-to-discuss-AI-Art">Framework to discuss AI Art<a class="anchor-link" href="#Framework-to-discuss-AI-Art">&#182;</a></h2><p>Moving forwards, we'll use <strong>Tool</strong>, <strong>Effect</strong>, and <strong>Concept</strong> to interpret different examples of art.</p>
+<h2 id="Framework-to-discuss-AI-Art">Framework to discuss AI Art<a class="anchor-link" href="#Framework-to-discuss-AI-Art">&#182;</a></h2><ul>
+<li>Definition #1: <strong>Making creative use of outputs from an AI <em>Tool</em> </strong></li>
+<li>Definition #2: <strong>Leveraging how AI represents information to deliberately craft an <em>Effect</em> </strong></li>
+<li>Definition #3: <strong>Exploring the <em>Concepts</em> within AI and what they mean for us</strong></li>
+</ul>
+<p>Moving forwards, we'll use <strong>Tool</strong>, <strong>Effect</strong>, and <strong>Concept</strong> to interpret different examples of art.</p>
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12232,7 +12272,7 @@ a.anchor-link {
 <h1 id="But-first...">But first...<a class="anchor-link" href="#But-first...">&#182;</a></h1>
 </div>
 </div>
-</div>
+</div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12246,7 +12286,7 @@ a.anchor-link {
 
 </div>
 </div>
-</div>
+</div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12258,7 +12298,7 @@ a.anchor-link {
 
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12269,7 +12309,7 @@ a.anchor-link {
 
 </div>
 </div>
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12282,7 +12322,7 @@ a.anchor-link {
 
 </div>
 </div>
-</div>
+</div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12294,20 +12334,7 @@ a.anchor-link {
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[0]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># new slide</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
+</div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12317,7 +12344,7 @@ a.anchor-link {
 
 </div>
 </div>
-</div>
+</div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12327,20 +12354,7 @@ a.anchor-link {
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[0]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># new slide</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
+</div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12350,7 +12364,7 @@ a.anchor-link {
 
 </div>
 </div>
-</div>
+</div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12362,20 +12376,7 @@ a.anchor-link {
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[0]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># consider basic neuron diagram...</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12391,12 +12392,12 @@ a.anchor-link {
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <p>What's relevant here is that art can be defined by whoever is creating it.</p>
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Duchamp_Fountaine.jpg" alt="duchamp"></p>
-<p><em>"Fountain," Marcel Duchamp, 1917</em> Source: <a href="https://en.wikipedia.org/wiki/Marcel_Duchamp">wikipedia</a></p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Duchamp_Fountaine.jpg" width=400 />
+<em>"Fountain," Marcel Duchamp, 1917</em> Source: <a href="https://en.wikipedia.org/wiki/Marcel_Duchamp">wikipedia</a></p>
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12404,7 +12405,7 @@ a.anchor-link {
 <h1 id="Back-to-AI-Art">Back to AI Art<a class="anchor-link" href="#Back-to-AI-Art">&#182;</a></h1>
 </div>
 </div>
-</div>
+</div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12415,7 +12416,7 @@ a.anchor-link {
 
 </div>
 </div>
-</div>
+</div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12425,7 +12426,7 @@ a.anchor-link {
 
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12433,7 +12434,7 @@ a.anchor-link {
 <h1 id="Definition-#1:-Making-creative-use-of-outputs-from-an-AI-Tool">Definition #1: Making creative use of outputs from an AI <em>Tool</em><a class="anchor-link" href="#Definition-#1:-Making-creative-use-of-outputs-from-an-AI-Tool">&#182;</a></h1>
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12441,7 +12442,7 @@ a.anchor-link {
 <h2 id="My-Work:-a-first-use-case-for-an-AI-art-tool">My Work: a first use-case for an AI art tool<a class="anchor-link" href="#My-Work:-a-first-use-case-for-an-AI-art-tool">&#182;</a></h2>
 </div>
 </div>
-</div>
+</div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
