@@ -1,6 +1,7 @@
-ipynblog_template:
+!TemplateConfig
+ipynblog_template: !IpynbTemplate
   colab_url: https://colab.research.google.com/drive/1vKkCidDN6PE1o9BYvRk2Lxx9T-WdFzcx#scrollTo=rH0i1mgF4dIT
   images_dir: ./public/images/
-  nbconvert_input: /Users/alook/whirlwind_tour/notebooks/a_whirlwind_tour_of_ai_art.ipynb
+  nbconvert_input: ./notebooks/a_whirlwind_tour_of_ai_art.ipynb
   nbconvert_output: ./public/index.html
   nbconvert_template: ./nbconvert/distill_v2_svelte.tpl
