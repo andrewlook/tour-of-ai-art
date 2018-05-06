@@ -5,7 +5,13 @@
     <script src="https://distill.pub/template.v2.js"></script>
 
     
-    <title>Notebook</title>
+    <title>Notebook</title><style type="text/css">
+        .anchor-link {
+            display: hidden;
+        }
+    </style>
+
+    
     
     
     
@@ -16,12 +22,10 @@
     <d-article>
         
 
-
             <div class="l-body">
-                <h1 id="A-(Brief)-Tour-of-AI-Art">A (Brief) Tour of AI Art<a class="anchor-link" href="#A-(Brief)-Tour-of-AI-Art">&#182;</a></h1><h4 id="by-Andrew-Look">by Andrew Look<a class="anchor-link" href="#by-Andrew-Look">&#182;</a></h4><p><img src="https://github.com/andrewlook/tour-of-ai-art/raw/master/notebooks/images/title/IMG_7772_guided.gif" width=400 /></p>
+                <h1 id="A-(Brief)-Tour-of-AI-Art">A (Brief) Tour of AI Art<a class="anchor-link" href="#A-(Brief)-Tour-of-AI-Art">&#182;</a></h1><h4 id="by-Andrew-Look">by Andrew Look<a class="anchor-link" href="#by-Andrew-Look">&#182;</a></h4><p><img src="images/title/IMG_7772_guided.gif" width=400 /></p>
 
             </div>
-
 
             <div class="l-body">
                 <blockquote><p><em>“Whatever you now find weird, ugly, uncomfortable, and nasty about a new medium will surely become its signature.</em></p>
@@ -37,111 +41,27 @@
 
             </div>
 
-
             <div class="l-body">
-                <h1 id="Before-we-begin">Before we begin<a class="anchor-link" href="#Before-we-begin">&#182;</a></h1>
-            </div>
-
-
-            <div class="l-body">
-                <h2 id="You-Are-here-because:">You Are here because:<a class="anchor-link" href="#You-Are-here-because:">&#182;</a></h2><ul>
+                <h1 id="What-to-expect">What to expect<a class="anchor-link" href="#What-to-expect">&#182;</a></h1><h2 id="You-Are-here-because:">You Are here because:<a class="anchor-link" href="#You-Are-here-because:">&#182;</a></h2><ul>
 <li>You are aware of AI but might not have heard about artistic uses</li>
 <li>You're curious to learn how AI can augment the creative process</li>
 </ul>
-
-            </div>
-
-
-            <div class="l-body">
-                <h2 id="By-the-end-of-this-tour">By the end of this tour<a class="anchor-link" href="#By-the-end-of-this-tour">&#182;</a></h2><p><strong>My goal is to help you understand:</strong></p>
+<h2 id="By-the-end-of-this-tour">By the end of this tour<a class="anchor-link" href="#By-the-end-of-this-tour">&#182;</a></h2><p><strong>My goal is to help you understand:</strong></p>
 <ul>
 <li>How using AI art tools can <em>augment</em> your creativity</li>
-</ul>
-
-            </div>
-
-
-            <div class="l-body">
-                <ul>
 <li>How some existing artists are incorporating AI tools and concepts into their work</li>
-</ul>
-
-            </div>
-
-
-            <div class="l-body">
-                <ul>
 <li>Just enough tools, concepts, and aesthetic options to begin making your own AI art</li>
-</ul>
-
-            </div>
-
-
-            <div class="l-body">
-                <ul>
 <li>Aesthetic controls at a deeper level, for one particular technique <em>(deepdreams)</em></li>
-</ul>
-
-            </div>
-
-
-            <div class="l-body">
-                <ul>
 <li>Where to learn more if you want to get involved!</li>
 </ul>
-
-            </div>
-
-
-            <div class="l-body">
-                <h2 id="About-Me">About Me<a class="anchor-link" href="#About-Me">&#182;</a></h2><p>I'm Andrew Look, ML engineer on the Knowledge team at Pinterest.</p>
-<p>I work on building classifier algorithms to look at each pin and determine its Taste Graph Interests.</p>
-<p>I started painting as a stress-relief hobby from startup life pre-Pinterest.</p>
-
-            </div>
-
-
-            <d-code block language="python" class="l-body" style="overflow: hidden; text-overflow: ellipsis;">
-                
-                # asset ideas:
-# - hacker companion painting
-# - me asleep with book
-# - pinterest yearbook
-            </d-code>
-
-
-            <div class="l-body">
-                <h2 id="Disclaimer:-not-a-real-expert-on-computer-vision,-neuroscience-or-art">Disclaimer: not a real expert on computer vision, neuroscience or art<a class="anchor-link" href="#Disclaimer:-not-a-real-expert-on-computer-vision,-neuroscience-or-art">&#182;</a></h2><p>But I <em>have</em> spent a couple years learning about the space, so I'll do my best to explain things as I understand them so far.</p>
-
-            </div>
-
-
-            <div class="l-body">
-                <h2 id="Disclaimer:-For-those-more-familiar-with-AI">Disclaimer: For those more familiar with AI<a class="anchor-link" href="#Disclaimer:-For-those-more-familiar-with-AI">&#182;</a></h2><ul>
+<h2 id="Disclaimer:-not-a-real-expert-on-computer-vision,-neuroscience-or-art">Disclaimer: not a real expert on computer vision, neuroscience or art<a class="anchor-link" href="#Disclaimer:-not-a-real-expert-on-computer-vision,-neuroscience-or-art">&#182;</a></h2><p>But I <em>have</em> spent a couple years learning about the space, so I'll do my best to explain things as I understand them so far.</p>
+<h2 id="Disclaimer:-For-those-more-familiar-with-AI">Disclaimer: For those more familiar with AI<a class="anchor-link" href="#Disclaimer:-For-those-more-familiar-with-AI">&#182;</a></h2><ul>
 <li>I plan on making some broad generalizations in the interests of brevity.</li>
 <li>If you're interested in the technical details, I'll have resources for you afterwards!</li>
 </ul>
+<h2 id="Following-along">Following along<a class="anchor-link" href="#Following-along">&#182;</a></h2><p>you may follow along using this interactive notebook hosted on Google Colab: <strong><a href="https://colab.research.google.com/github/andrewlook/tour-of-ai-art/blob/master/notebooks/a_whirlwind_tour_of_ai_art.ipynb#scrollTo=-88s3MpezIVD">Start Here</a></strong></p>
 
             </div>
-
-
-            <div class="l-body">
-                <h2 id="Following-along">Following along<a class="anchor-link" href="#Following-along">&#182;</a></h2><p>If you don't have a laptop, this presentation is designed to still be interesting and useful.</p>
-
-            </div>
-
-
-            <div class="l-body">
-                <p><strong>Request:</strong> Audience volunteer to slack me an image I can use for demos: <code>@look</code></p>
-
-            </div>
-
-
-            <div class="l-body">
-                <p>If you have a laptop, you may follow along using this interactive notebook hosted on Google Colab: <strong><a href="https://colab.research.google.com/github/andrewlook/tour-of-ai-art/blob/master/notebooks/a_whirlwind_tour_of_ai_art.ipynb#scrollTo=-88s3MpezIVD">Start Here</a></strong></p>
-<h2 id="https://bit.ly/2K1RNaE"><a href="https://bit.ly/2K1RNaE">https://bit.ly/2K1RNaE</a><a class="anchor-link" href="#https://bit.ly/2K1RNaE">&#182;</a></h2>
-            </div>
-
 
             <div class="l-body">
                 <h1 id="Start-here">Start here<a class="anchor-link" href="#Start-here">&#182;</a></h1><p>All you need to do to follow along are a few steps:</p>
@@ -152,28 +72,12 @@
 <li>Kick off the longer setup scripts and wait a few mins</li>
 <li>Test deepdream just to make sure everything works</li>
 </ol>
-
-            </div>
-
-
-            <div class="l-body">
-                <h2 id="Step-1---Save-a-copy">Step 1 - Save a copy<a class="anchor-link" href="#Step-1---Save-a-copy">&#182;</a></h2><p>If you want to save your notebook to you own Google Drive account.</p>
-<p>In the top menu, choose <strong>File -&gt; Save a copy in drive</strong> from the top menu when you're ready to save.</p>
-
-            </div>
-
-
-            <div class="l-body">
-                <h2 id="Step-2---Change-Runtime-to-&quot;GPU&quot;">Step 2 - Change Runtime to "GPU"<a class="anchor-link" href="#Step-2---Change-Runtime-to-&quot;GPU&quot;">&#182;</a></h2><p>This makes notebook run much, much faster.</p>
+<h2 id="Step-1---Save-a-copy">Step 1 - Save a copy<a class="anchor-link" href="#Step-1---Save-a-copy">&#182;</a></h2><p>If you want to save your notebook to you own Google Drive account. In the top menu, choose <strong>File -&gt; Save a copy in drive</strong> from the top menu when you're ready to save.</p>
+<h2 id="Step-2---Change-Runtime-to-&quot;GPU&quot;">Step 2 - Change Runtime to "GPU"<a class="anchor-link" href="#Step-2---Change-Runtime-to-&quot;GPU&quot;">&#182;</a></h2><p>This makes notebook run much, much faster.</p>
 <p>In the top menu, Click <strong>Runtime</strong> and then select <strong>Change Runtime Type</strong>.</p>
 <p>Then, click the <strong>Hardware Accelerator</strong> dropdown, select <strong>GPU</strong> and then click <strong>Save</strong></p>
 <p><img src="https://github.com/andrewlook/tour-of-ai-art/raw/master/notebooks/images/gpu_py2_colab.png" width=400 /></p>
-
-            </div>
-
-
-            <div class="l-body">
-                <p>When you're done, running the following code cell should confirm that a GPU is available:</p>
+<p>When you're done, running the following code cell should confirm that a GPU is available:</p>
 
             </div>
 
@@ -200,63 +104,20 @@ assert sys.version.startswith(&#39;2&#39;)
     </div>
 
 
-
             <div class="l-body">
                 <h2 id="Step-3---Kick-off-the-longer-setup-scripts-and-wait-a-few-mins">Step 3 - Kick off the longer setup scripts and wait a few mins<a class="anchor-link" href="#Step-3---Kick-off-the-longer-setup-scripts-and-wait-a-few-mins">&#182;</a></h2><p>There's a bunch of big blobs of code below - if you skip down to a cell below them and run the following, it will execute all cells before that one:
 <strong><code>&lt;Cmd&gt;-&lt;fn&gt;-F8</code></strong>
 (Note: you may not need to press <code>fn</code> key).</p>
-<p><a href="#scrollTo=BqovZ9fu5Vrf">Click here</a> to jump ahead to the right cell.</p>
 
             </div>
 
 
             <d-code block language="python" class="l-body" style="overflow: hidden; text-overflow: ellipsis;">
                 
-                # basic image mgmt functions
-
-
-!pip install scikit-image lucid
-
+                !pip install scikit-image lucid
 from __future__ import print_function
-import numpy as np
-import PIL
-
-from IPython import display as ipyd
-from lucid.misc.io import reading, showing
-from skimage import io
-# http://scikit-image.org/docs/dev/api/skimage.transform.html
-from skimage import transform
 from IPython import display as ipyd
 
-# from https://stackoverflow.com/questions/39382412/crop-center-portion-of-a-numpy-image
-def crop_center(img, cropx, cropy):
-    y, x, _ = img.shape
-    startx = x // 2 - (cropx // 2)
-    starty = y // 2 - (cropy // 2)    
-    return img[starty:starty+cropy, startx:startx+cropx, :]
- 
-def square_shrink(img, dim):
-  smaller_dim = min(img.shape[:2])
-  cropped = crop_center(img, smaller_dim, smaller_dim)
-  small_cropped = transform.resize(cropped, (dim, dim, img.shape[2]), mode=&#39;constant&#39;)
-  return small_cropped
-
-def load_img(fname, dim=None):
-  img = io.imread(fname)
-  if not dim:
-    return transform.resize(img, (img.shape[0], img.shape[1], img.shape[2]), mode=&#39;constant&#39;)
-  small_img = square_shrink(img, dim=dim)
-  return small_img
-
-def upload_images():
-  from google.colab import files
-  uploaded = files.upload()
-  img_fnames = []
-  for fn in uploaded.keys():
-    print(&#39;User uploaded file &#34;{name}&#34; with length {length} bytes&#39;.format(
-        name=fn, length=len(uploaded[fn])))
-    img_fnames.append(fn)
-  return img_fnames
             </d-code>
 
 
@@ -1474,7 +1335,6 @@ function present_acts(activations, pos) {
     </div>
 
 
-
             <div class="l-body">
                 <h3 id="Jump-down-here-and-run-all-setup-cells-at-once">Jump down here and run all setup cells at once<a class="anchor-link" href="#Jump-down-here-and-run-all-setup-cells-at-once">&#182;</a></h3><p>run the following, it will execute all cells before that one:
 <strong><code>&lt;Cmd&gt;-&lt;fn&gt;-F8</code></strong>
@@ -1499,7 +1359,6 @@ render_multiscale(T(layer)[:,:,:,channel])
 render_lapnorm(T(layer)[:,:,:,channel])
 
             </d-code>
-
 
             <div class="l-body">
                 <h2 id="Step-4---Upload-your-photo(s)-and-display-them">Step 4 - Upload your photo(s) and display them<a class="anchor-link" href="#Step-4---Upload-your-photo(s)-and-display-them">&#182;</a></h2>
@@ -1559,7 +1418,6 @@ large_img_0 = large_imgs[0]
     </div>
 
 
-
             <div class="l-body">
                 <h2 id="Colab-Hints">Colab Hints<a class="anchor-link" href="#Colab-Hints">&#182;</a></h2><p>If you want to learn more about how to navigate Colab:</p>
 <ul>
@@ -1574,17 +1432,14 @@ large_img_0 = large_imgs[0]
 
             </div>
 
-
             <div class="l-body">
                 <h1 id="What-is-AI-art?">What is AI art?<a class="anchor-link" href="#What-is-AI-art?">&#182;</a></h1>
             </div>
-
 
             <div class="l-body">
                 <p>Definition #1: <strong>Making creative use of outputs from an AI <em>Tool</em> </strong></p>
 
             </div>
-
 
             <div class="l-body">
                 <h2 id="Example:-pix2pix">Example: <a href="https://affinelayer.com/pixsrv/">pix2pix</a><a class="anchor-link" href="#Example:-pix2pix">&#182;</a></h2><p>Even without much context on how it works, Pix2Pix is fun to play with and yields wierd results.</p>
@@ -1594,12 +1449,10 @@ large_img_0 = large_imgs[0]
 <!-- ![pix2pix_pyramid_cat](https://media.giphy.com/media/wHYLEo4Z7kPJwlbO9U/giphy.gif) -->
             </div>
 
-
             <div class="l-body">
                 <p>Definition #2: <strong>Leveraging how AI represents information to deliberately craft an <em>Effect</em> </strong></p>
 
             </div>
-
 
             <div class="l-body">
                 <h2 id="Example:-&quot;Face-Space&quot;">Example: "Face Space"<a class="anchor-link" href="#Example:-&quot;Face-Space&quot;">&#182;</a></h2><p>For example, recent generative algorithms have rapidly improved their ability both to learn <strong>latent spaces</strong>, and to <strong>generate</strong> images from any point in these latent spaces.</p>
@@ -1609,19 +1462,16 @@ large_img_0 = large_imgs[0]
 
             </div>
 
-
             <div class="l-body">
                 <h2 id="Example:-Toposketch">Example: <a href="https://vusd.github.io/toposketch/">Toposketch</a><a class="anchor-link" href="#Example:-Toposketch">&#182;</a></h2><p>Researchers have built tools to allow visual navigation of latent spaces in order to gain fine-grained control over the generated artifacts.</p>
 <p><img src="https://media.giphy.com/media/5BYqBxH66X3UobP3SH/giphy.gif" alt="toposketch_man_loop"></p>
 
             </div>
 
-
             <div class="l-body">
                 <p>Definition #3: <strong>Exploring the <em>Concepts</em> within AI and what they mean for us</strong></p>
 
             </div>
-
 
             <div class="l-body">
                 <h2 id="Example:-Treachery-of-Imagenet">Example: Treachery of Imagenet<a class="anchor-link" href="#Example:-Treachery-of-Imagenet">&#182;</a></h2><p><img src="https://github.com/andrewlook/tour-of-ai-art/raw/master/notebooks/images/tom_white_adversarial_posters.jpg" alt="img"></p>
@@ -1629,13 +1479,11 @@ large_img_0 = large_imgs[0]
 
             </div>
 
-
             <div class="l-body">
                 <h2 id="Example:-Simulating-How-Humans-Draw">Example: Simulating How Humans Draw<a class="anchor-link" href="#Example:-Simulating-How-Humans-Draw">&#182;</a></h2><p><img src="https://media.giphy.com/media/OjY1YSX6jFROm02W0J/giphy.gif" alt=""></p>
 <p><a href="https://deepmind.com/blog/learning-to-generate-images/">source</a></p>
 
             </div>
-
 
             <div class="l-body">
                 <h2 id="Framework-to-discuss-AI-Art">Framework to discuss AI Art<a class="anchor-link" href="#Framework-to-discuss-AI-Art">&#182;</a></h2><ul>
@@ -1647,11 +1495,9 @@ large_img_0 = large_imgs[0]
 
             </div>
 
-
             <div class="l-body">
                 <h1 id="But-first...">But first...<a class="anchor-link" href="#But-first...">&#182;</a></h1>
             </div>
-
 
             <div class="l-body">
                 <h2 id="What-does-AI-actually-mean?">What does AI actually mean?<a class="anchor-link" href="#What-does-AI-actually-mean?">&#182;</a></h2><p>AI is a term used in so many contexts, that it can be confusing for an audience.</p>
@@ -1663,7 +1509,6 @@ large_img_0 = large_imgs[0]
 
             </div>
 
-
             <div class="l-body">
                 <h2 id="What-kind-of-AI-are-we-focusing-on-today?">What kind of AI are we focusing on today?<a class="anchor-link" href="#What-kind-of-AI-are-we-focusing-on-today?">&#182;</a></h2><p>The <strong>Specialized</strong> kind (also known as <strong>Machine Learning</strong>).</p>
 <p>We'll be focused on artistic applications of techniques that have sprung out of real-world research.</p>
@@ -1672,14 +1517,12 @@ large_img_0 = large_imgs[0]
 
             </div>
 
-
             <div class="l-body">
                 <p>Sorry to disappoint, but this tutorial won't cover robots that paint:</p>
 <p><img src="https://media.giphy.com/media/8P7fmIpUYBwHgjo322/giphy.gif" alt="not this"></p>
 <p>Source: Deepmind <a href="https://deepmind.com/blog/learning-to-generate-images/">blog</a> <a href="https://deepmind.com/documents/183/SPIRAL.pdf">pdf</a> <a href="https://www.youtube.com/watch?v=iSyvwAwa7vk">youtube</a></p>
 
             </div>
-
 
             <div class="l-body">
                 <h2 id="OK,-so-what-is-ML?">OK, so what is ML?<a class="anchor-link" href="#OK,-so-what-is-ML?">&#182;</a></h2><p>Machine Learning (usually) refers to a type of algorithm that:</p>
@@ -1690,7 +1533,6 @@ large_img_0 = large_imgs[0]
 
             </div>
 
-
             <div class="l-body">
                 <h3 id="A-Simple-Example">A Simple Example<a class="anchor-link" href="#A-Simple-Example">&#182;</a></h3><p>Imagine we want to predict housing prices.</p>
 <p>We'd probably start with a spreadsheet of prices we know to be true, alongside features for each house that we expect to be related to the price.</p>
@@ -1699,13 +1541,11 @@ large_img_0 = large_imgs[0]
 
             </div>
 
-
             <div class="l-body">
                 <p>If we plot price vs. size on this toy dataset, we can start to see a slope</p>
 <p><img src="https://cdn-images-1.medium.com/max/1280/1*HUJzcLczeBFRdPPZ5HMcbw.png" alt="housepricesscatter"></p>
 
             </div>
-
 
             <div class="l-body">
                 <h3 id="Predicting-price-using-the-house-size">Predicting price using the house size<a class="anchor-link" href="#Predicting-price-using-the-house-size">&#182;</a></h3><p>If we were to draw a line through these points, the "slope" would be what you multiply the <code>size</code> by in order to get the <code>price</code> (plus a "bias" term, if the slope doesn't meet the Y-axis right at zero).</p>
@@ -1713,13 +1553,11 @@ large_img_0 = large_imgs[0]
 
             </div>
 
-
             <div class="l-body">
                 <p>You can visualize the <strong>error</strong> as the distance from each real data point's <code>Y</code> coordinate to the <strong>prediction</strong>: the line's value at the corresponding <code>X</code> coordinate.</p>
 <p><img src="https://cdn-images-1.medium.com/max/1280/1*iBDH0gBBJNs-oLqUT17yng.png" alt="errorbars"></p>
 
             </div>
-
 
             <div class="l-body">
                 <h3 id="What-&quot;Learning&quot;-Means">What "Learning" Means<a class="anchor-link" href="#What-&quot;Learning&quot;-Means">&#182;</a></h3><p>The way ML algorithms "learn" is defined by their <strong>objective</strong>.</p>
@@ -1729,12 +1567,10 @@ large_img_0 = large_imgs[0]
 
             </div>
 
-
             <div class="l-body">
                 <h2 id="What-is-art?">What is art?<a class="anchor-link" href="#What-is-art?">&#182;</a></h2><p>Out of respect to artists everywhere, I'm not going to try to define it.</p>
 
             </div>
-
 
             <div class="l-body">
                 <hr>
@@ -1744,11 +1580,9 @@ large_img_0 = large_imgs[0]
 
             </div>
 
-
             <div class="l-body">
                 <h1 id="Back-to-AI-Art">Back to AI Art<a class="anchor-link" href="#Back-to-AI-Art">&#182;</a></h1>
             </div>
-
 
             <div class="l-body">
                 <p>Definition #1: <strong>Making creative use of outputs from an AI <em>Tool</em> </strong></p>
@@ -1757,23 +1591,19 @@ large_img_0 = large_imgs[0]
 
             </div>
 
-
             <div class="l-body">
                 <p>These definitions actually mirror the progression of my own art practice.</p>
 <p>I'll step through them in an attempt to share how my understanding of the space has evolved since I first started.</p>
 
             </div>
 
-
             <div class="l-body">
                 <h1 id="Definition-#1:-Making-creative-use-of-outputs-from-an-AI-Tool">Definition #1: Making creative use of outputs from an AI <em>Tool</em><a class="anchor-link" href="#Definition-#1:-Making-creative-use-of-outputs-from-an-AI-Tool">&#182;</a></h1>
             </div>
 
-
             <div class="l-body">
                 <h2 id="My-Work:-a-first-use-case-for-an-AI-art-tool">My Work: a first use-case for an AI art tool<a class="anchor-link" href="#My-Work:-a-first-use-case-for-an-AI-art-tool">&#182;</a></h2>
             </div>
-
 
             <div class="l-body">
                 <p>I started getting serious about learning ML sometime after starting to paint.</p>
@@ -1782,7 +1612,6 @@ large_img_0 = large_imgs[0]
 <p><img src="https://lh3.googleusercontent.com/GznHwRqvdYWzoju9ND-vi4yXrbGGYPwjqW4gajOcz8Po4RTF1rGI3PrJlCIA4OZQRbw7klE4rBagDRs-HXxpvN5ldqfj4J-sAlziBSwOK_ZcNP5RtZyRwXRP2SWuJgBog1jHH-rmwBRC5ec_lxeT1VNqND21iAVCak547gQffAOa6jGWZC2-6CecRw-thU8pt3c9i-9v8c-unAJ645_ni5CSHQYIsIki5cOBaUBAllbh4pcRGHwnN-wsvmpmIb2sSW_NLSe4RSGnNj163N3vcvU9jMq-NMiNBxVnY4DWJGR4C4mG22Xr_Xp6R6N5m_j-Z3vjU2XMevUEJbuaweP4X8rksBEsAJ_5acPeyL2l8mQuzeYUyfuuPpHE7U8OA3DbWuGBf7UKGg8IheaDB4_QmMnPIsT3rZ49aOGRtIZ_TBGvmqSBnU-0GuzukASTjitd4BVi_v7Oa8B2O7hWZhmflv2u2S-UNtkDE6hWeyZXs3UnMjhjbyy1HicNTEDita-JcwtgENJkfXFKaCJnb9wfMBgSdLiNScKzMXe_xz_z50IwDBZvoyHsj7KHHjsiOcmEy0AKnrqDvmk4OyXsEKe_X1854op0AsrwICw3V6CW-Z98UbgRLg75cP6ss1L7tVKRj1-DDMz-GJOjlxullRygCB0q7BADx0e_NA=w494-h658-no" alt="startup_dinner"></p>
 
             </div>
-
 
             <div class="l-body">
                 <h4 id="Img-Setup">Img Setup<a class="anchor-link" href="#Img-Setup">&#182;</a></h4>
@@ -1837,12 +1666,10 @@ large_img_0 = large_imgs[0]
     </div>
 
 
-
             <div class="l-body">
                 <h3 id="Emulating-Surrealism?">Emulating Surrealism?<a class="anchor-link" href="#Emulating-Surrealism?">&#182;</a></h3><p>When we were asked to make a painting of the "past," the prompt was to make it "nightmarish."</p>
 
             </div>
-
 
             <div class="l-body">
                 <p>I had another photo chosen already, which i jokingly titled "startup breakfast".</p>
@@ -1851,24 +1678,20 @@ large_img_0 = large_imgs[0]
 
             </div>
 
-
             <div class="l-body">
                 <h3 id="Enter-Deepdreams">Enter Deepdreams<a class="anchor-link" href="#Enter-Deepdreams">&#182;</a></h3><p>Thankfully, code for making deepdreams had just been <a href="https://research.googleblog.com/2015/06/inceptionism-going-deeper-into-neural.html">announced by Google Research</a>.</p>
 
             </div>
-
 
             <div class="l-body">
                 <p><img src="https://2.bp.blogspot.com/-nxPKPYA8otk/VYIWRcpjZfI/AAAAAAAAAmE/8dSuxLnSNQ4/s640/image-dream-map.png" alt="deepdream_examples"></p>
 
             </div>
 
-
             <div class="l-body">
                 <h3 id="Running-my-first-Deepdream">Running my first Deepdream<a class="anchor-link" href="#Running-my-first-Deepdream">&#182;</a></h3><p><img src="https://github.com/andrewlook/tour-of-ai-art/raw/master/notebooks/images/3-breakfast-normal.jpg" width=400 /></p>
 
             </div>
-
 
             <div class="l-body">
                 <p><img src="https://github.com/andrewlook/tour-of-ai-art/raw/master/notebooks/images/4-breakfast-dream.jpg" width=400 /></p>
@@ -1885,7 +1708,7 @@ large_img_0 = large_imgs[0]
         
     <div class="output_jpeg output_subarea ">
             
-            <img src="images/output_77_0.jpeg"
+            <img src="images/output_61_0.jpeg"
         />
     </div>
     
@@ -1903,12 +1726,11 @@ new_img = render_deepdream(tf.square(T(&#39;mixed4c&#39;)), large_img_0*255)
         
     <div class="output_jpeg output_subarea ">
             
-            <img src="images/output_78_0.jpeg"
+            <img src="images/output_62_0.jpeg"
         />
     </div>
     
     </div>
-
 
 
             <div class="l-body">
@@ -1916,18 +1738,15 @@ new_img = render_deepdream(tf.square(T(&#39;mixed4c&#39;)), large_img_0*255)
 
             </div>
 
-
             <div class="l-body">
                 <p><img src="https://github.com/andrewlook/tour-of-ai-art/raw/master/notebooks/images/breakfast/paint_2016-11-19.jpg" width=400 /></p>
 
             </div>
 
-
             <div class="l-body">
                 <p><img src="https://github.com/andrewlook/tour-of-ai-art/raw/master/notebooks/images/breakfast/IMG_5592.jpg" width=400 /></p>
 
             </div>
-
 
             <div class="l-body">
                 <h2 id="What's-going-on-here?">What's going on here?<a class="anchor-link" href="#What's-going-on-here?">&#182;</a></h2><blockquote><p>"That looks like a statement about how animals relate to the food we eat"</p>
@@ -1938,7 +1757,6 @@ new_img = render_deepdream(tf.square(T(&#39;mixed4c&#39;)), large_img_0*255)
 
             </div>
 
-
             <div class="l-body">
                 <p>This tool arose from trying to understand what Neural Networks "see".</p>
 <p>One way to do this is by understanding which area of the image caused the prediction:</p>
@@ -1947,13 +1765,11 @@ new_img = render_deepdream(tf.square(T(&#39;mixed4c&#39;)), large_img_0*255)
 
             </div>
 
-
             <div class="l-body">
                 <p>Instead, the a-ha moment for the deepdream authors was that we could get the neural network to "hallucinate" and how us <em>"what picture would make this look more like X"</em>?</p>
 <p><img src="https://github.com/andrewlook/tour-of-ai-art/raw/master/notebooks/images/featureviz.png" width=400 /></p>
 
             </div>
-
 
             <div class="l-body">
                 <blockquote><p>Pareidolia is a type of apophenia, which is a more generalized term for seeing patterns in random data. Some common examples are seeing a likeness of Jesus in the clouds or an image of a man on the surface of the moon.</p>
@@ -1963,11 +1779,9 @@ new_img = render_deepdream(tf.square(T(&#39;mixed4c&#39;)), large_img_0*255)
 
             </div>
 
-
             <div class="l-body">
                 <h1 id="Definition-#2:-Leveraging-how-AI-represents-information-to-deliberately-craft-an-Effect-">Definition #2: <strong>Leveraging how AI represents information to deliberately craft an <em>Effect</em> </strong><a class="anchor-link" href="#Definition-#2:-Leveraging-how-AI-represents-information-to-deliberately-craft-an-Effect-">&#182;</a></h1>
             </div>
-
 
             <div class="l-body">
                 <blockquote><p>"I paint not the things I see but the feelings they arouse in me"</p>
@@ -1979,47 +1793,39 @@ new_img = render_deepdream(tf.square(T(&#39;mixed4c&#39;)), large_img_0*255)
 
             </div>
 
-
             <div class="l-body">
                 <p><img src="https://cdn-images-1.medium.com/max/1600/1*3rECTefgSkJJ6Sni5sxptA.png" width=600 /></p>
 
             </div>
 
-
             <div class="l-body">
                 <h2 id="My-Work:-exploring-high-and-low-layers">My Work: exploring high and low layers<a class="anchor-link" href="#My-Work:-exploring-high-and-low-layers">&#182;</a></h2>
             </div>
-
 
             <div class="l-body">
                 <p><img src="https://github.com/andrewlook/tour-of-ai-art/raw/master/notebooks/images/n2.jpg" width=400/></p>
 
             </div>
 
-
             <div class="l-body">
                 <p><img src="https://github.com/andrewlook/tour-of-ai-art/raw/master/notebooks/images/n3.jpg" width=400/></p>
 
             </div>
-
 
             <div class="l-body">
                 <p><img src="https://github.com/andrewlook/tour-of-ai-art/raw/master/notebooks/images/IMG_5907.jpg" width=400 /></p>
 
             </div>
 
-
             <div class="l-body">
                 <p><img src="https://github.com/andrewlook/tour-of-ai-art/raw/master/notebooks/images/IMG_7101.JPG" width=400 /></p>
 
             </div>
 
-
             <div class="l-body">
                 <p><img src="https://github.com/andrewlook/tour-of-ai-art/raw/master/notebooks/images/naptime_mixed3a_i30.jpeg" width=400 /></p>
 
             </div>
-
 
             <div class="l-body">
                 <h2 id="How-does-it-work?">How does it work?<a class="anchor-link" href="#How-does-it-work?">&#182;</a></h2>
@@ -2072,7 +1878,7 @@ combo__mixed4d_65__mixed3b_101 = render_lapnorm(T(mixed4d)[:,:,:,65]+T(mixed4d)[
         
     <div class="output_jpeg output_subarea ">
             
-            <img src="images/output_97_0.jpeg"
+            <img src="images/output_81_0.jpeg"
         />
     </div>
     
@@ -2096,7 +1902,6 @@ render_lapnorm(T(layer)[:,:,:,65]+T(layer)[:,:,:,139], octave_n=4)
 
             </d-code>
 
-
             <div class="l-body">
                 <h2 id="Example:-Face-Interpolation">Example: Face Interpolation<a class="anchor-link" href="#Example:-Face-Interpolation">&#182;</a></h2><p>When we <strong>interpolate</strong> between points in the space, generating images at each point along the way, it's striking that (almost) every point in between looks like a person.</p>
 <p>One can't but help thinking that these algorithms are beginning to learn some fundamental truths about what we as humans all have in common.</p>
@@ -2105,7 +1910,6 @@ render_lapnorm(T(layer)[:,:,:,65]+T(layer)[:,:,:,139], octave_n=4)
 <p>Paper: <a href="http://research.nvidia.com/publication/2017-10_Progressive-Growing-of"><em>Progressive Growing of GANs for Improved Quality, Stability, and Variation</em>, Karras et al, 2018</a></p>
 
             </div>
-
 
             <div class="l-body">
                 <h1 id="Definition-#3:-Exploring-the-Concepts-within-AI-and-what-they-means-for-us">Definition #3: <strong>Exploring the <em>Concepts</em> within AI and what they means for us</strong><a class="anchor-link" href="#Definition-#3:-Exploring-the-Concepts-within-AI-and-what-they-means-for-us">&#182;</a></h1><p>Among other things, this could encompass exploring AI's relationships to:</p>
@@ -2117,11 +1921,9 @@ render_lapnorm(T(layer)[:,:,:,65]+T(layer)[:,:,:,139], octave_n=4)
 
             </div>
 
-
             <div class="l-body">
                 <h2 id="My-explorations-of-concepts">My explorations of concepts<a class="anchor-link" href="#My-explorations-of-concepts">&#182;</a></h2>
             </div>
-
 
             <div class="l-body">
                 <h2 id="Example:-SketchRNN">Example: SketchRNN<a class="anchor-link" href="#Example:-SketchRNN">&#182;</a></h2>
@@ -2132,7 +1934,6 @@ render_lapnorm(T(layer)[:,:,:,65]+T(layer)[:,:,:,139], octave_n=4)
                 
                 # TODO sketchrnn / DRAW / paint?
             </d-code>
-
 
             <div class="l-body">
                 <h2 id="Example:-Treachery-of-Imagenet">Example: Treachery of Imagenet<a class="anchor-link" href="#Example:-Treachery-of-Imagenet">&#182;</a></h2>
