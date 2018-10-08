@@ -1,5 +1,10 @@
 ---
-ColabURL: https://colab.research.google.com/drive/1L0VpfSrjTthCZVW4qjUEdoXNH0DqFTHC
+author_email: andrew.m.look@gmail.com
+author_name: Andrew Look
+colab_url:https://colab.research.google.com/drive/1vKkCidDN6PE1o9BYvRk2Lxx9T-WdFzcx#scrollTo=rH0i1mgF4dIT
+dt: '2018-04-19'
+project_slug: a_whirlwind_tour_of_ai_art
+colab2_url: https://colab.research.google.com/drive/1L0VpfSrjTthCZVW4qjUEdoXNH0DqFTHC
 ---
 
 

@@ -149,3 +149,83 @@ Instead, the a-ha moment for the deepdream authors was that we could get the neu
 
 <img src="https://github.com/andrewlook/tour-of-ai-art/raw/master/notebooks/images/naptime_mixed3a_i30.jpeg" width=400 />
 
+# Background on deepdreams
+
+This tool arose from trying to **understand what Neural Networks "see".**
+
+One way to do this is by understanding which area of the image caused the prediction:
+
+<img src="https://github.com/andrewlook/tour-of-ai-art/raw/master/notebooks/images/attribution.png" width=400 />
+
+source: [distill.pub](https://distill.pub/2017/feature-visualization/)
+
+---
+
+Instead, the a-ha moment for the deepdream authors was that we could get the neural network to "hallucinate" and how us *"what picture would make this look more like X"*?
+
+<img src="https://github.com/andrewlook/tour-of-ai-art/raw/master/notebooks/images/featureviz.png" width=400 />
+
+
+> Pareidolia is a type of apophenia, which is a more generalized term for seeing patterns in random data. Some common examples are seeing a likeness of Jesus in the clouds or an image of a man on the surface of the moon.
+>
+> -- [source](https://www.livescience.com/25448-pareidolia.html)
+
+<img src="https://img.purch.com/w/640/aHR0cDovL3d3dy5saXZlc2NpZW5jZS5jb20vaW1hZ2VzL2kvMDAwLzAzNC8zNDMvaTAyL3JvcnNjaGFjaC0wMi5qcGc/MTM1NTI2Njg4MA==" widht=400 />
+
+# Deliberately Crafting an Effect
+
+<img src="https://cdn-images-1.medium.com/max/1600/1*3rECTefgSkJJ6Sni5sxptA.png" width=600 />
+
+## My Work: exploring high and low layers
+
+<img src="https://github.com/andrewlook/tour-of-ai-art/raw/master/notebooks/images/n2.jpg" width=400/>
+
+<img src="https://github.com/andrewlook/tour-of-ai-art/raw/master/notebooks/images/n3.jpg" width=400/>
+
+<img src="https://github.com/andrewlook/tour-of-ai-art/raw/master/notebooks/images/IMG_5907.jpg" width=400 />
+
+<img src="https://github.com/andrewlook/tour-of-ai-art/raw/master/notebooks/images/IMG_7101.JPG" width=400 />
+
+<img src="https://github.com/andrewlook/tour-of-ai-art/raw/master/notebooks/images/naptime_mixed3a_i30.jpeg" width=400 />
+
+
+
+### How do deepdreams work?
+
+Convolutional neural nets have a hierarchical structure:
+
+<img src="https://cdn-images-1.medium.com/max/1600/1*3rECTefgSkJJ6Sni5sxptA.png" width=600 />
+
+Introspecting different computer vision models, motivated users can tune
+deepdream settings to achieve or enhance a particular effect.
+
+```
+# Visualizing the network graph. Be sure expand the "mixed" nodes to see their
+# internal structure. We are going to visualize "Conv2D" nodes.
+tmp_def = rename_nodes(graph_def, lambda s:"/".join(s.split('_',1)))
+show_graph(tmp_def)
+```
+
+# TF RUN CODE
+
+```
+mixed4d = 'mixed4d_3x3_bottleneck_pre_relu'
+mixed4d_65 = render_lapnorm(T(mixed4d)[:,:,:,65])
+
+# Lower layers produce features of lower complexity.
+mixed3b_101 = render_lapnorm(T('mixed3b_1x1_pre_relu')[:,:,:,101])
+
+# optimizing a linear combination of features often gives a "mixture" pattern.
+combo__mixed4d_65__mixed3b_101 = render_lapnorm(T(mixed4d)[:,:,:,65]+T(mixed4d)[:,:,:,139], octave_n=4)
+```
+
+
+```
+render_lapnorm(T(layer)[:,:,:,65])
+
+# Lower layers produce features of lower complexity.
+render_lapnorm(T('mixed3b_1x1_pre_relu')[:,:,:,101])
+
+# optimizing a linear combination of features often gives a "mixture" pattern.
+render_lapnorm(T(layer)[:,:,:,65]+T(layer)[:,:,:,139], octave_n=4)
+```
